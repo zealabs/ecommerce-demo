@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+
+<!-- Mirrored from demo.7dc8c4c2680e.ngrok.io/en/customer/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 May 2021 19:11:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700%7CLato%7CKalam:300,400,700">
+<meta name="description" content="Free website shopping cart for business">
+<meta name="keyword" content="">
+<title>Account register</title>
+<link rel="icon" href="../../images/icon.png" type="image/png" sizes="16x16">
+<meta property="og:image" content="../../images/org.jpg" />
+<meta property="og:url" content="register.html" />
+<meta property="og:type" content="Website" />
+<meta property="og:title" content="Account register" />
+<meta property="og:description" content="Free website shopping cart for business" />
+<meta name="csrf-token" content="sSjUMYPhBzoBs8aZXcculqoiQtEENiQb7jOTE1Uf">
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128658138-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "UA-128658138-1");
+</script>
+
+<link rel="stylesheet" href="../../templates/s-cart-light/css/bootstrap.css">
+<link rel="stylesheet" href="../../templates/s-cart-light/css/fonts.css">
+<link rel="stylesheet" href="../../templates/s-cart-light/css/style.css">
+<style>
+        
+.sc-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: -webkit-translate(-50%, -50%);
+  transform: -moz-translate(-50%, -50%);
+  transform: -ms-translate(-50%, -50%);
+  color:#1f222b;
+  z-index: 9999;
+  background: rgba(255,255,255,0.7);
+}
+  
+#sc-loading{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(255,255,255,0.7);
+}
+/*end loading */
+  
+/*price*/
+.sc-new-price{
+  color:#FE980F;
+  font-size: 14px;
+  padding: 10px 5px;
+  font-weight:bold;
+  }
+  .sc-old-price {
+  text-decoration: line-through;
+  color: #a95d5d;
+  font-size: 13px;
+  padding: 10px;
+  }
+  /*end price*/
+.sc-product-build{
+  font-size: 20px;
+  font-weight: bold;
+}
+.sc-product-build img{
+  width: 50px;
+}
+.sc-product-group  img{
+  width: 100px;
+  cursor: pointer;
+  }
+.sc-product-group:hover{
+  box-shadow: 0px 0px 2px #999;
+}
+.sc-product-group:active{
+  box-shadow: 0px 0px 2px #ff00ff;
+}
+.sc-product-group.active{
+  box-shadow: 0px 0px 2px #ff00ff;
+}
+
+.sc-shipping-address td{
+  padding: 3px !important;
+}
+.sc-shipping-address textarea,
+.sc-shipping-address input[type="text"],
+.sc-shipping-address option{
+  width: 100%;
+  padding: 7px !important;
+}
+.row_cart>td{
+  vertical-align: middle !important;
+}
+input[type="number"]{
+  text-align: center;
+  padding:2px;
+}
+.sc-notice{
+  clear: both;
+  clear: both;
+  font-size: 20px;
+  background: #f3f3f3;
+  width: 100%;
+}
+img.new {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 0px !important;
+}
+.pointer {
+  cursor: pointer;
+}
+.add-to-cart-list {
+  padding: 5px 10px !important;
+  margin: 2px !important;
+  letter-spacing: 0px !important;
+  font-size: 12px !important;
+  border-radius: 5px;
+}
+.help-block {
+  font-size: 12px;
+  color: red;
+  font-style: italic;
+}
+    </style>
+<style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+</head>
+<body>
+<div class="ie-panel">
+<a href="http://windows.microsoft.com/en-US/internet-explorer/">
+<img src="../../templates/s-cart-light/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+</a>
+</div>
+<div class="page">
+
+<header class="section page-header">
+
+<div class="rd-navbar-wrap">
+<nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="100px" data-xl-stick-up-offset="100px" data-xxl-stick-up-offset="100px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+<div class="rd-navbar-main-outer">
+<div class="rd-navbar-main">
+
+<div class="rd-navbar-panel">
+
+<button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+
+<div class="rd-navbar-brand">
+<a class="brand" href="../../index.html"><img class="brand-logo-dark" src="../../data/logo/scart-mid.png" alt="" width="105" height="44" />
+<img class="brand-logo-light" src="../../data/logo/scart-mid.png" alt="" width="106" height="44" /></a>
+</div>
+</div>
+<div class="rd-navbar-nav-wrap">
+
+<ul class="rd-navbar-nav">
+<li class="rd-nav-item active"><a class="rd-nav-link" href="../../index.html">Home</a></li>
+<li class="rd-nav-item"><a class="rd-nav-link" href="../shop.html">Shop</a></li>
+<li class="rd-nav-item">
+<a class="rd-nav-link" href="../news.html">Blogs</a>
+</li>
+<li class="rd-nav-item"><a class="rd-nav-link" href="#">CMS category</a>
+<ul class="rd-menu rd-navbar-dropdown">
+<li class="rd-dropdown-item"><a class="rd-dropdown-link" href="../cms-category/demo-category-1.html">Category CMS 1</a></li>
+<li class="rd-dropdown-item"><a class="rd-dropdown-link" href="../cms-category/demo-category-2.html">Category CMS 2</a></li>
+</ul>
+</li>
+<li class="rd-nav-item">
+<a class="rd-nav-link" href="../contact.html">Contact us</a>
+</li>
+<li class="rd-nav-item">
+<a class="rd-nav-link" href="../about.html">About us</a>
+</li>
+<li class="rd-nav-item"><a class="rd-nav-link" href="#"><i class="fa fa-lock"></i> customer</a>
+<ul class="rd-menu rd-navbar-dropdown">
+<li class="rd-dropdown-item">
+<a class="rd-dropdown-link" href="login.html"><i class="fa fa-user"></i> Login</a>
+</li>
+<li class="rd-dropdown-item">
+<a class="rd-dropdown-link" href="../wishlst.html"><i class="fas fa-heart"></i> Wishlist
+<span class="count sc-wishlist" id="shopping-wishlist">0</span>
+</a>
+</li>
+<li class="rd-dropdown-item">
+<a class="rd-dropdown-link" href="../compare.html"><i class="fa fa-exchange"></i> Compare
+<span class="count sc-compare" id="shopping-compare">0</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="rd-nav-item">
+<a class="rd-nav-link" href="#">
+<img src="../../data/language/flag_uk.png" style="height: 25px;"> <i class="fas fa-caret-down"></i>
+</a>
+<ul class="rd-menu rd-navbar-dropdown">
+<li class="rd-dropdown-item">
+<a class="rd-dropdown-link" href="register.html">
+<img src="../../data/language/flag_uk.png" style="height: 25px;"> English
+</a>
+</li>
+<li class="rd-dropdown-item">
+<a class="rd-dropdown-link" href="register.html">
+<img src="../../data/language/flag_vn.png" style="height: 25px;"> Tiếng Việt
+</a>
+</li>
+</ul>
+</li>
+<li class="rd-nav-item">
+<a class="rd-nav-link" href="#">
+VietNam Dong <i class="fas fa-caret-down"></i>
+</a>
+<ul class="rd-menu rd-navbar-dropdown">
+<li class="rd-dropdown-item">
+<a class="rd-dropdown-link" href="../compare.html">
+USD Dola
+</a>
+</li>
+<li class="rd-dropdown-item" disabled>
+<a class="rd-dropdown-link" href="register.html">
+VietNam Dong
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="rd-navbar-main-element">
+
+<div class="rd-navbar-search rd-navbar-search-2">
+<button class="rd-navbar-search-toggle rd-navbar-fixed-element-3" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
+<form class="rd-search" action="https://demo.7dc8c4c2680e.ngrok.io/en/search.html" method="GET">
+<div class="form-wrap">
+<input class="rd-navbar-search-form-input form-input" type="text" name="keyword" placeholder="Input keyword" />
+<button class="rd-search-form-submit" type="submit"></button>
+</div>
+</form>
+</div>
+ 
+<div class="rd-navbar-basket-wrap">
+<a href="../cart.html">
+<button class="rd-navbar-basket fl-bigmug-line-shopping202">
+<span class="count sc-cart" id="shopping-cart">0</span>
+</button>
+</a>
+</div>
+<a title="Shopping cart" style="margin-top:10px;" class="rd-navbar-basket rd-navbar-basket-mobile fl-bigmug-line-shopping202 rd-navbar-fixed-element-2" href="../cart.html">
+<span class="count sc-cart">0</span>
+</a>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "../../../connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=934208239994473";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, "script", "facebook-jssdk"));
+</script>
+<section class="breadcrumbs-custom">
+<div class="breadcrumbs-custom-footer">
+<div class="container">
+<ul class="breadcrumbs-custom-path">
+<li><a href="../../index.html">Home</a></li>
+<li class="active">Account register</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<div class="col-12">
+<div class="sc-notice">
+</div>
+</div>
+
+
+
+<section class="section section-sm section-first bg-default text-md-left">
+<div class="container">
+<div class="row">
+<div class="col-12 col-sm-12">
+<h2>Account register</h2>
+<form action="https://demo.7dc8c4c2680e.ngrok.io/en/customer/register.html" method="post" class="box" id="form-process">
+<input type="hidden" name="_token" value="sSjUMYPhBzoBs8aZXcculqoiQtEENiQb7jOTE1Uf">
+<div class="form_content" id="collapseExample">
+<div class="form-group">
+<input type="text" class="is_required validate account_input form-control " name="first_name" placeholder="First name" value="">
+</div>
+<div class="form-group">
+<input type="text" class="is_required validate account_input form-control " name="last_name" placeholder="Last name" value="">
+</div>
+<div class="form-group">
+<input type="text" class="is_required validate account_input form-control " name="email" placeholder="Email" value="">
+</div>
+<div class="form-group">
+<input type="text" class="is_required validate account_input form-control " name="phone" placeholder="Phone" value="">
+</div>
+<div class="form-group">
+<input type="text" class="is_required validate account_input form-control " name="address1" placeholder="Address 1" value="">
+</div>
+<div class="form-group">
+<input type="text" class="is_required validate account_input form-control " name="address2" placeholder="Address 2" value="">
+</div>
+<div class="form-group  ">
+<select class="form-control country" style="width: 100%;" name="country">
+<option>__Country__</option>
+<option value="AL">Albania</option>
+<option value="DZ">Algeria</option>
+<option value="DS">American Samoa</option>
+<option value="AD">Andorra</option>
+<option value="AO">Angola</option>
+<option value="AI">Anguilla</option>
+<option value="AQ">Antarctica</option>
+<option value="AG">Antigua and Barbuda</option>
+<option value="AR">Argentina</option>
+<option value="AM">Armenia</option>
+<option value="AW">Aruba</option>
+<option value="AU">Australia</option>
+<option value="AT">Austria</option>
+<option value="AZ">Azerbaijan</option>
+<option value="BS">Bahamas</option>
+<option value="BH">Bahrain</option>
+<option value="BD">Bangladesh</option>
+<option value="BB">Barbados</option>
+<option value="BY">Belarus</option>
+<option value="BE">Belgium</option>
+<option value="BZ">Belize</option>
+<option value="BJ">Benin</option>
+<option value="BM">Bermuda</option>
+<option value="BT">Bhutan</option>
+<option value="BO">Bolivia</option>
+<option value="BA">Bosnia and Herzegovina</option>
+<option value="BW">Botswana</option>
+<option value="BV">Bouvet Island</option>
+<option value="BR">Brazil</option>
+<option value="IO">British Indian Ocean Territory</option>
+<option value="BN">Brunei Darussalam</option>
+<option value="BG">Bulgaria</option>
+<option value="BF">Burkina Faso</option>
+<option value="BI">Burundi</option>
+<option value="KH">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="CV">Cape Verde</option>
+<option value="KY">Cayman Islands</option>
+<option value="CF">Central African Republic</option>
+<option value="TD">Chad</option>
+<option value="CL">Chile</option>
+<option value="CN">China</option>
+<option value="CX">Christmas Island</option>
+<option value="CC">Cocos (Keeling) Islands</option>
+<option value="CO">Colombia</option>
+<option value="KM">Comoros</option>
+<option value="CG">Congo</option>
+<option value="CK">Cook Islands</option>
+<option value="CR">Costa Rica</option>
+<option value="HR">Croatia (Hrvatska)</option>
+<option value="CU">Cuba</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czech Republic</option>
+<option value="DK">Denmark</option>
+<option value="DJ">Djibouti</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="TP">East Timor</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="SV">El Salvador</option>
+<option value="GQ">Equatorial Guinea</option>
+<option value="ER">Eritrea</option>
+<option value="EE">Estonia</option>
+<option value="ET">Ethiopia</option>
+<option value="FK">Falkland Islands (Malvinas)</option>
+<option value="FO">Faroe Islands</option>
+<option value="FJ">Fiji</option>
+<option value="FI">Finland</option>
+<option value="FR">France</option>
+<option value="FX">France, Metropolitan</option>
+<option value="GF">French Guiana</option>
+<option value="PF">French Polynesia</option>
+<option value="TF">French Southern Territories</option>
+<option value="GA">Gabon</option>
+<option value="GM">Gambia</option>
+<option value="GE">Georgia</option>
+<option value="DE">Germany</option>
+<option value="GH">Ghana</option>
+ <option value="GI">Gibraltar</option>
+<option value="GK">Guernsey</option>
+<option value="GR">Greece</option>
+<option value="GL">Greenland</option>
+<option value="GD">Grenada</option>
+<option value="GP">Guadeloupe</option>
+<option value="GU">Guam</option>
+<option value="GT">Guatemala</option>
+<option value="GN">Guinea</option>
+<option value="GW">Guinea-Bissau</option>
+<option value="GY">Guyana</option>
+<option value="HT">Haiti</option>
+<option value="HM">Heard and Mc Donald Islands</option>
+<option value="HN">Honduras</option>
+<option value="HK">Hong Kong</option>
+<option value="HU">Hungary</option>
+<option value="IS">Iceland</option>
+<option value="IN">India</option>
+<option value="IM">Isle of Man</option>
+<option value="ID">Indonesia</option>
+<option value="IR">Iran (Islamic Republic of)</option>
+<option value="IQ">Iraq</option>
+<option value="IE">Ireland</option>
+<option value="IL">Israel</option>
+<option value="IT">Italy</option>
+<option value="CI">Ivory Coast</option>
+<option value="JE">Jersey</option>
+<option value="JM">Jamaica</option>
+<option value="JP">Japan</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KE">Kenya</option>
+<option value="KI">Kiribati</option>
+<option value="KP">Korea,Democratic Peoples Republic of</option>
+<option value="KR">Korea, Republic of</option>
+<option value="XK">Kosovo</option>
+<option value="KW">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LA">Lao Peoples Democratic Republic</option>
+<option value="LV">Latvia</option>
+<option value="LB">Lebanon</option>
+<option value="LS">Lesotho</option>
+<option value="LR">Liberia</option>
+<option value="LY">Libyan Arab Jamahiriya</option>
+<option value="LI">Liechtenstein</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MO">Macau</option>
+<option value="MK">Macedonia</option>
+<option value="MG">Madagascar</option>
+<option value="MW">Malawi</option>
+<option value="MY">Malaysia</option>
+<option value="MV">Maldives</option>
+<option value="ML">Mali</option>
+<option value="MT">Malta</option>
+<option value="MH">Marshall Islands</option>
+<option value="MQ">Martinique</option>
+<option value="MR">Mauritania</option>
+<option value="MU">Mauritius</option>
+<option value="TY">Mayotte</option>
+<option value="MX">Mexico</option>
+<option value="FM">Micronesia, Federated States of</option>
+<option value="MD">Moldova, Republic of</option>
+<option value="MC">Monaco</option>
+<option value="MN">Mongolia</option>
+<option value="ME">Montenegro</option>
+<option value="MS">Montserrat</option>
+<option value="MA">Morocco</option>
+<option value="MZ">Mozambique</option>
+<option value="MM">Myanmar</option>
+<option value="NA">Namibia</option>
+<option value="NR">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="NL">Netherlands</option>
+<option value="AN">Netherlands Antilles</option>
+<option value="NC">New Caledonia</option>
+<option value="NZ">New Zealand</option>
+<option value="NI">Nicaragua</option>
+<option value="NE">Niger</option>
+<option value="NG">Nigeria</option>
+<option value="NU">Niue</option>
+<option value="NF">Norfolk Island</option>
+<option value="MP">Northern Mariana Islands</option>
+<option value="NO">Norway</option>
+<option value="OM">Oman</option>
+ <option value="PK">Pakistan</option>
+<option value="PW">Palau</option>
+<option value="PS">Palestine</option>
+<option value="PA">Panama</option>
+<option value="PG">Papua New Guinea</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="PH">Philippines</option>
+<option value="PN">Pitcairn</option>
+<option value="PL">Poland</option>
+<option value="PT">Portugal</option>
+<option value="PR">Puerto Rico</option>
+<option value="QA">Qatar</option>
+<option value="RE">Reunion</option>
+<option value="RO">Romania</option>
+<option value="RU">Russian Federation</option>
+<option value="RW">Rwanda</option>
+<option value="KN">Saint Kitts and Nevis</option>
+<option value="LC">Saint Lucia</option>
+<option value="VC">Saint Vincent and the Grenadines</option>
+<option value="WS">Samoa</option>
+<option value="SM">San Marino</option>
+<option value="ST">Sao Tome and Principe</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SN">Senegal</option>
+<option value="RS">Serbia</option>
+<option value="SC">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SG">Singapore</option>
+<option value="SK">Slovakia</option>
+<option value="SI">Slovenia</option>
+<option value="SB">Solomon Islands</option>
+<option value="SO">Somalia</option>
+<option value="ZA">South Africa</option>
+<option value="GS">South Georgia South Sandwich Islands</option>
+<option value="SS">South Sudan</option>
+<option value="ES">Spain</option>
+<option value="LK">Sri Lanka</option>
+<option value="SH">St. Helena</option>
+<option value="PM">St. Pierre and Miquelon</option>
+<option value="SD">Sudan</option>
+<option value="SR">Suriname</option>
+<option value="SJ">Svalbard and Jan Mayen Islands</option>
+<option value="SZ">Swaziland</option>
+<option value="SE">Sweden</option>
+<option value="CH">Switzerland</option>
+<option value="SY">Syrian Arab Republic</option>
+<option value="TW">Taiwan</option>
+<option value="TJ">Tajikistan</option>
+<option value="TZ">Tanzania, United Republic of</option>
+<option value="TH">Thailand</option>
+<option value="TG">Togo</option>
+<option value="TK">Tokelau</option>
+<option value="TO">Tonga</option>
+<option value="TT">Trinidad and Tobago</option>
+<option value="TN">Tunisia</option>
+<option value="TR">Turkey</option>
+<option value="TM">Turkmenistan</option>
+<option value="TC">Turks and Caicos Islands</option>
+<option value="TV">Tuvalu</option>
+<option value="UG">Uganda</option>
+<option value="UA">Ukraine</option>
+<option value="AE">United Arab Emirates</option>
+<option value="GB">United Kingdom</option>
+<option value="US">United States</option>
+<option value="UM">United States minor outlying islands</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VU">Vanuatu</option>
+<option value="VA">Vatican City State</option>
+<option value="VE">Venezuela</option>
+<option value="VN">Vietnam</option>
+<option value="VG">Virgin Islands (British)</option>
+<option value="VI">Virgin Islands (U.S.)</option>
+<option value="WF">Wallis and Futuna Islands</option>
+<option value="EH">Western Sahara</option>
+<option value="YE">Yemen</option>
+<option value="ZR">Zaire</option>
+<option value="ZM">Zambia</option>
+<option value="ZW">Zimbabwe</option>
+</select>
+</div>
+<div class="form-group">
+<input type="password" class="is_required validate account_input form-control " name="password" placeholder="Password" value="">
+</div>
+<div class="form-group">
+<input type="password" class="is_required validate account_input form-control " placeholder="Password confirm" name="password_confirmation" value="">
+</div>
+<style>
+    #button-form-process{
+        display: none !important;
+    }
+</style>
+<script src="../../../www.google.com/recaptcha/api.js"></script>
+<button class="g-recaptcha button" data-sitekey="6LcyhswZAAAAALSgF3tAJxMsy7jTqvL5NnFFmVrg" data-callback='onSubmit' data-action='submit'>Signup</button>
+<script>
+    function onSubmit(token) {
+        document.getElementById("form-process").submit();
+    }
+</script>
+<div class="submit">
+<button type="submit" name="SubmitCreate" class="button button-lg button-secondary" id="button-form-process">Signup</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+
+<style>
+section.contact {
+    width: 100%;
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #0c0c0c6b;
+    -moz-box-shadow: 0 -1px 0 rgba(0,0,0,.2);
+}
+section.contact a {
+color:#fff !important
+}
+</style>
+<section class="contact">
+<div class="container" style="padding:10px !important;color:#fff;text-align: center;">
+<div class="row">
+<div class="col-xs-12 col-sm-4">
+<a href="../../sc_admin/auth/login.html"><span class="fa fa-map-signs" aria-hidden="true"></span> ADMIN PANEL</a>
+</div>
+<div class="col-xs-12 col-sm-4">
+<a href="https://7dc8c4c2680e.ngrok.io/download.html"><span class="fa fa-arrow-circle-down" aria-hidden="true"></span> Download</a>
+</div>
+</div>
+</section>
+
+
+<footer class="section footer-classic">
+<div class="footer-classic-body section-lg bg-brown-2">
+<div class="container">
+<div class="row row-40 row-md-50 justify-content-xl-between">
+<div class="col-sm-6 col-lg-4 col-xl-3 wow fadeInRight">
+<a href="../../index.html">
+<img class="logo-footer" src="../../data/logo/scart-mid.png" alt="Demo S-Cart : Free Laravel eCommerce">
+</a>
+<p>Demo S-Cart : Free Laravel eCommerce</p>
+<p> </p>
+<div class="footer-classic-social">
+<div class="group-lg group-middle">
+<div>
+<ul class="list-inline list-social list-inline-sm">
+<li><a class="icon mdi mdi-facebook" href="#"></a></li>
+<li><a class="icon mdi mdi-twitter" href="#"></a></li>
+<li><a class="icon mdi mdi-instagram" href="#"></a></li>
+<li><a class="icon mdi mdi-google-plus" href="#"></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-lg-4 col-xl-3 wow fadeInRight" data-wow-delay=".1s">
+<h4 class="footer-classic-title">About us</h4>
+<ul class="contacts-creative">
+<li>
+<div class="unit unit-spacing-sm flex-column flex-md-row">
+<div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
+<div class="unit-body"><a href="#">Address: 123st - abc - xyz</a></div>
+</div>
+</li>
+<li>
+<div class="unit unit-spacing-sm flex-column flex-md-row">
+<div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
+<div class="unit-body"><a href="tel:#">Hotline: Support: 0987654321</a></div>
+</div>
+</li>
+<li>
+<div class="unit unit-spacing-sm flex-column flex-md-row">
+<div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
+<div class="unit-body"><a href="mailto:#demo@7dc8c4c2680e.ngrok.io">Email: demo@7dc8c4c2680e.ngrok.io</a></div>
+</div>
+</li>
+<li>
+<form class="rd-form-inline rd-form-inline-2" method="post" action="https://demo.7dc8c4c2680e.ngrok.io/en/subscribe">
+<input type="hidden" name="_token" value="sSjUMYPhBzoBs8aZXcculqoiQtEENiQb7jOTE1Uf"> <div class="form-wrap">
+<input class="form-input" id="subscribe-form-2-email" type="email" name="subscribe_email" required />
+<label class="form-label" for="subscribe-form-2-email">Email</label>
+</div>
+<div class="form-button">
+<button class="button button-icon-2 button-zakaria button-primary" type="submit" title="Subscribe email">
+<span class="fl-bigmug-line-paper122"></span>
+</button>
+</div>
+</form>
+</li>
+</ul>
+</div>
+<div class="col-lg-4 wow fadeInRight" data-wow-delay=".2s">
+<h4 class="footer-classic-title"> My profile</h4>
+
+<ul class="contacts-creative">
+<li>
+<a href="../wishlst.html">Product Wishlist</a>
+</li>
+<li>
+<a href="../compare.html">Product compare</a>
+</li>
+<li>
+<a href="login.html">My profile</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-classic-panel">
+<div class="container">
+<div class="row row-10 align-items-center justify-content-sm-between">
+<div class="col-md-auto">
+<p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Demo S-Cart : Free Laravel eCommerce</span><span>.&nbsp; All rights reserved</span></p>
+</div>
+<div class="col-md-auto order-md-1"> <a target="_blank" href="https://www.facebook.com/SCart.Ecommerce/">Fanpage FB</a></div>
+<div class="col-md-auto">
+Power by <a href="https://7dc8c4c2680e.ngrok.io/">S-Cart 6.2.1</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div id="sc-loading">
+<div class="sc-overlay"><i class="fa fa-spinner fa-pulse fa-5x fa-fw "></i></div>
+</div>
+<script src="../../templates/s-cart-light/js/core.min.js"></script>
+<script src="../../templates/s-cart-light/js/script.js"></script>
+
+<script type="text/javascript">
+  function formatNumber (num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+  }
+  $('#shipping').change(function(){
+    $('#total').html(formatNumber(parseInt(0)+ parseInt($('#shipping').val())));
+  });
+</script>
+<script src="../../js/sweetalert2.all.min.js"></script>
+<script>
+      function alertJs(type = 'error', msg = '') {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000
+      });
+      Toast.fire({
+        type: type,
+        title: msg
+      })
+    }
+
+    function alertMsg(type = 'error', msg = '', note = '') {
+      const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: true,
+      });
+      swalWithBootstrapButtons.fire(
+        msg,
+        note,
+        type
+      )
+    }
+</script>
+
+<script type="text/javascript">
+  function addToCartAjax(id, instance = null, storeId = null){
+    $.ajax({
+        url: "https://demo.7dc8c4c2680e.ngrok.io/en/add_to_cart_ajax",
+        type: "POST",
+        dataType: "JSON",
+        data: {
+          "id": id,
+          "instance":instance,
+          "storeId":storeId,
+          "_token":"sSjUMYPhBzoBs8aZXcculqoiQtEENiQb7jOTE1Uf"
+        },
+        async: false,
+        success: function(data){
+          // console.log(data);
+            error = parseInt(data.error);
+            if(error ==0)
+            {
+              setTimeout(function () {
+                if(data.instance =='default'){
+                  $('.sc-cart').html(data.count_cart);
+                }else{
+                  $('.sc-'+data.instance).html(data.count_cart);
+                }
+              }, 1000);
+              alertJs('success', data.msg);
+            }else{
+              if(data.redirect){
+                window.location.replace(data.redirect);
+                return;
+              }
+              alertJs('error', data.msg);
+            }
+
+            }
+    });
+  }
+</script>
+
+
+
+
+</body>
+
+<!-- Mirrored from demo.7dc8c4c2680e.ngrok.io/en/customer/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 May 2021 19:11:54 GMT -->
+</html>
